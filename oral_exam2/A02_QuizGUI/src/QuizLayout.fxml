@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="QuizController">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Give up" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutY="29.0" prefHeight="9999.0" prefWidth="640.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox prefWidth="9999.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="9999.0" text="Good luck!" textOverrun="CLIP">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <VBox prefHeight="150.0" prefWidth="581.0" style="-fx-background-color: #EFEFEF;">
+                     <children>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="9999.0" style="-fx-background-color: #E7E7E7;" text="(1 point) Question 1: What grade will Ethan get on this oral exam?">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <RadioButton fx:id="q1Correct" mnemonicParsing="false" prefHeight="30.0" prefWidth="624.0" text="110%">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q1" />
+                           </toggleGroup>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="30.0" prefWidth="624.0" text="100%" toggleGroup="$q1">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="30.0" prefWidth="624.0" text="99.9%" toggleGroup="$q1">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="30.0" prefWidth="624.0" text="99%" toggleGroup="$q1">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="19.0" prefWidth="581.0" />
+                  <VBox prefHeight="150.0" prefWidth="581.0" style="-fx-background-color: #EFEFEF;">
+                     <children>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="9999.0" style="-fx-background-color: #E7E7E7;" text="(1 point) Question 2: Which of the following are true? Select all that apply.">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <CheckBox fx:id="q2A" mnemonicParsing="false" prefHeight="30.0" prefWidth="581.0" text="Ethan is my favorite student">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="q2B" mnemonicParsing="false" prefHeight="30.0" prefWidth="581.0" text="My favorite student's name is Ethan">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="q2C" mnemonicParsing="false" prefHeight="30.0" prefWidth="581.0" text="My best student is Ethan">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="q2D" mnemonicParsing="false" prefHeight="30.0" prefWidth="581.0" text="I don't like any students more than Ethan">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="19.0" prefWidth="581.0" />
+                  <VBox prefHeight="330.0" prefWidth="581.0" style="-fx-background-color: #EFEFEF;">
+                     <children>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="9999.0" style="-fx-background-color: #E7E7E7;" text="(4 points) Question 3: Solve the Navier-Stokes equations.">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <VBox alignment="CENTER" prefHeight="175.0" prefWidth="581.0">
+                           <children>
+                              <ImageView fitHeight="187.0" fitWidth="293.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@navier-stokes.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <TextArea fx:id="q3TextArea" prefHeight="112.0" prefWidth="321.0" promptText="Provide your solution here">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                        </TextArea>
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="19.0" prefWidth="581.0" />
+                  <VBox alignment="TOP_CENTER" prefHeight="150.0" prefWidth="581.0" style="-fx-background-color: #EFEFEF;">
+                     <children>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="9999.0" style="-fx-background-color: #E7E7E7;" text="(1-ish point) Question 4: Kindly consider tipping your programmer">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <ChoiceBox fx:id="tipBox" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                           <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                 <String fx:value="25%" />
+                                 <String fx:value="30%" />
+                                 <String fx:value="40%" />
+                                 <String fx:value="50%" />
+                              </FXCollections>
+                           </items>
+                        </ChoiceBox>
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="19.0" prefWidth="581.0" />
+                  <VBox prefHeight="301.0" prefWidth="582.0" style="-fx-background-color: #EFEFEF;">
+                     <children>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="9999.0" style="-fx-background-color: #E7E7E7;" text="(2 points) Question 5: Classify these events into good and bad. (click to move)">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="270.0" prefWidth="582.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="999.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="15.0" prefWidth="9999.0" style="-fx-background-color: #E7E7E7;" text="Good :)" />
+                                    <VBox fx:id="goodList" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                                       <children>
+                                          <Label fx:id="draggable_0" onMouseReleased="#listItemOnClick" prefHeight="20.0" prefWidth="9999.0" style="-fx-border-color: black;" text="Ethan wins the lottery">
+                                             <VBox.margin>
+                                                <Insets left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label fx:id="draggable_1" layoutX="15.0" layoutY="15.0" onMouseReleased="#listItemOnClick" prefHeight="20.0" prefWidth="9999.0" style="-fx-border-color: black;" text="Ethan gets hit by a bus">
+                                             <VBox.margin>
+                                                <Insets left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label fx:id="draggable_2" onMouseReleased="#listItemOnClick" prefHeight="20.0" prefWidth="9999.0" style="-fx-border-color: black;" text="Ethan gets an A+ in ECE:3300">
+                                             <VBox.margin>
+                                                <Insets left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label fx:id="draggable_3" onMouseReleased="#listItemOnClick" prefHeight="20.0" prefWidth="9999.0" style="-fx-border-color: black;" text="Ethan fails a class">
+                                             <VBox.margin>
+                                                <Insets left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label fx:id="draggable_4" onMouseReleased="#listItemOnClick" prefHeight="20.0" prefWidth="9999.0" style="-fx-border-color: black;" text="Ethan becomes a celebrity talk show host">
+                                             <VBox.margin>
+                                                <Insets left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="999.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="15.0" prefWidth="9999.0" style="-fx-background-color: #E7E7E7;" text="Bad :(" />
+                                    <VBox fx:id="badList" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="19.0" prefWidth="581.0" />
+                  <VBox prefHeight="90.0" prefWidth="581.0" style="-fx-background-color: #EFEFEF;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="9999.0" style="-fx-background-color: #E7E7E7;" text="By signing below you agree that all answers above are your own work">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="signatureArea" prefWidth="50.0" promptText="Your full name here">
+                           <VBox.margin>
+                              <Insets left="80.0" right="80.0" top="15.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="19.0" prefWidth="581.0" />
+                  <VBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#quizSubmitted" prefWidth="80.0" text="Submit!" />
+                        <Label fx:id="score" prefHeight="15.0" prefWidth="180.0" text="Score: submit to view">
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
